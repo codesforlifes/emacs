@@ -1,4 +1,5 @@
 ;; 设置字体大小 
+
 (create-fontset-from-fontset-spec 
 "-outline-Courier New-normal-r-normal-normal-20-97-96-96-c-*-fontset-gbk") 
 (set-fontset-font 
@@ -17,3 +18,25 @@
 "fontset-gbk" 'symbol 
 "-outline-新宋体-normal-r-normal-*-18-*-96-96-c-*-iso10646-1" nil 'prepend) 
 (set-default-font "fontset-gbk") 
+
+;; 隐藏 工具栏
+
+(tool-bar-mode -1)
+
+;; 隐藏 菜单栏
+
+(menu-bar-mode -1)
+
+;; 隐藏 滚动条
+
+(scroll-bar-mode -1)
+
+
+;; 设置 标题栏
+
+(setq frame-title-format "name")
+
+;; 设置光标显示方式
+
+(set-default 'cursor-type 'hbar)
+
