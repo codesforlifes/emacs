@@ -1,0 +1,19 @@
+;; 设置字体大小 
+(create-fontset-from-fontset-spec 
+"-outline-Courier New-normal-r-normal-normal-20-97-96-96-c-*-fontset-gbk") 
+(set-fontset-font 
+"fontset-default" nil 
+"-outline-新宋体-normal-r-normal-*-18-*-96-96-c-*-iso10646-1" nil 'prepend) 
+(set-fontset-font 
+"fontset-gbk" 'kana 
+"-outline-新宋体-normal-r-normal-*-18-*-96-96-c-*-iso10646-1" nil 'prepend) 
+(set-fontset-font 
+"fontset-gbk" 'han 
+"-outline-新宋体-normal-r-normal-*-18-*-96-96-c-*-iso10646-1" nil 'prepend) 
+(set-fontset-font 
+"fontset-gbk" 'cjk-misc 
+"-outline-新宋体-normal-r-normal-*-18-*-96-96-c-*-iso10646-1" nil 'prepend) 
+(set-fontset-font 
+"fontset-gbk" 'symbol 
+"-outline-新宋体-normal-r-normal-*-18-*-96-96-c-*-iso10646-1" nil 'prepend) 
+(set-default-font "fontset-gbk") 
