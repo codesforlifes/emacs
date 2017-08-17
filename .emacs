@@ -190,7 +190,8 @@
 					   counsel
 					   smartparens
 					   js2-mode
-					   nodejs-repl) "default packages")
+					   nodejs-repl
+					   emmet-mode) "default packages")
 
 ;; 便于管理插件
 (setq package-selected-packages packageLists)
@@ -271,3 +272,14 @@
 (setq org-agenda-files '("~/org"))
 
 (global-set-key (kbd "C-c a") 'org-agenda)
+
+;; emmet-mode 设置
+(add-to-list 'load-path "~/emacs.d/emmet-mode")
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode) ;; Auto-start on any markup modes
+(add-hook 'css-mode-hook  'emmet-mode) ;; enable Emmet's css abbreviation.
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indent-after-insert nil)))
+(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 4))) ;; indent 4 spaces.
+(setq emmet-move-cursor-after-expanding nil) ;; default t
+(setq emmet-expand-jsx-className? t) ;; default nil
+(setq emmet-self-closing-tag-style " /") ;; default "/"
